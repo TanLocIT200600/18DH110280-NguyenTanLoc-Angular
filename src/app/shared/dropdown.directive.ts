@@ -1,6 +1,9 @@
 import { Directive, ElementRef, HostBinding, HostListener, Input, Renderer2 } from "@angular/core";
 
-@Directive({ selector: '[appDropdown]' })
+@Directive({
+  selector: '[appDropdown]'
+})
+
 export class DropdownDirective {
   isOpen = false;
   constructor(
