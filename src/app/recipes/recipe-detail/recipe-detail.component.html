@@ -17,16 +17,18 @@
               Manage
             </button>
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              <a (click)="onAddToShoppingList()" class="dropdown-item"
-                style="cursor: pointer;">ToShoppingList</a>
-              <a class="dropdown-item" style="cursor: pointer;">EditRecipe</a>
-              <a class="dropdown-item" style="cursor: pointer;">ManageRecipe</a>
+              <a (click)="onAddToShoppingList()" class="dropdown-item" style="cursor: pointer;">To
+                ShoppingList</a>
+              <a [routerLink]="['/recipes/edit']" class="dropdown-item"
+                style="cursor: pointer;">Edit Recipe</a>
+              <a class="dropdown-item" style="cursor: pointer;" (click)="onDeleteRecipe()">Delete
+                Recipe</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class=" row">
       <div class="col-sm-12">{{recipe.description}}</div>
     </div>
     <div class="row">
